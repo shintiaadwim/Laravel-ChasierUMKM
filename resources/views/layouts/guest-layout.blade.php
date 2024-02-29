@@ -7,14 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Stand.art | @yield('title')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <script>
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
-                '(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-    </script>
 </head>
 
 <body class="dark:bg-gray-900 antialiased">
@@ -23,7 +15,8 @@
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <div class="flex items-center rounded-full mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
                 <div class="w-42 mr-2 select-none">
-                    <img src="{{ asset('assets/img/logo.png') }}" alt="logo" class="h-10" id="Layer_1" data-name="Layer 1">
+                    <img src="{{ asset('assets/img/logo.png') }}" alt="logo" class="h-10" id="Layer_1"
+                        data-name="Layer 1">
                 </div>
             </div>
             <div
