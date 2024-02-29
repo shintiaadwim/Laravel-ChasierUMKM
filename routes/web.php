@@ -29,6 +29,9 @@ Route::middleware(['auth'])->group(function () {
     Route::controller(HomeController::class)->group(function () {
         Route::get('/', 'index')
             ->name('home');
+
+        Route::get('users', 'show')
+            ->name('users');
     });
 
     Route::controller(ProductController::class)->group(function () {
